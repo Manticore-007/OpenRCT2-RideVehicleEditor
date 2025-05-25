@@ -9,7 +9,7 @@ export function multiplier(multiplierIndex: WritableStore<number>): WidgetCreato
 	const multiplierTip = "Multiplies all spinner controls by the specified amount";
 
 	return horizontal({
-		padding: { top: -4, right: 1 },
+		padding: { top: "1w", right: 11, bottom: 2 },
 		content: [
 			label({
 				text: "Multiplier:",
@@ -74,4 +74,12 @@ export function labelledSpinner<TParams extends (SpinnerParams | DropdownSpinner
 		params.disabledMessage ||= "Not available";
 	}
 	return labelled(<never>params);
+}
+
+
+export function getWindow(title: string): Window | undefined {
+    for (let i = 0; i < ui.windows; i++) {
+        if (ui.getWindow(i).title === title) return ui.getWindow(i);
+    }
+    return undefined;
 }

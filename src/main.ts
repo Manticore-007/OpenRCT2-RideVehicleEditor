@@ -13,6 +13,6 @@ export function main(): void
 	if (Environment.isUiAvailable)
 	{
 		registerShortcuts();
-		ui.registerMenuItem("Edit ride vehicles", () => openEditorWindow());
+		ui.registerMenuItem("Edit ride vehicles (new UI)", () => {openEditorWindow()});
 	}
 }

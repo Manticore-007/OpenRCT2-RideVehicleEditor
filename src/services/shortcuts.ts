@@ -1,4 +1,5 @@
-import { model, openEditorWindow } from "../ui/mainWindow";
+import { openEditorWindow } from "../ui/mainWindow";
+import { model } from "../ui/sideWindow";
 
 /**
  * Register all available shortcuts for the plugin.
