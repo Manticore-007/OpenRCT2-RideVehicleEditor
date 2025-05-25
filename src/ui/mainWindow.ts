@@ -100,6 +100,7 @@ const mainWindow = tabwindow({
 							}),
 							toggle({
 								width: buttonSize, height: buttonSize,
+								tooltip: "Collapse/expand side window",
 								image: compute(sideWindowActive, a => a ? 5161 : 5160), 
 								isPressed: compute(sideWindowActive, a => a),
 								onChange: (pressed) =>
